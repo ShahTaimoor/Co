@@ -52,6 +52,9 @@ app.use('/api', assessmentRoutes);
 // File upload (multer config)
 const upload = multer({ storage: multer.memoryStorage() });
 
+app.get('/', (req, res) => {
+  res.send('Welcome to the backend');
+});
 
 app.listen(port, () => {
   console.log(`✅ Server running on port ${port}`);
